@@ -10,14 +10,14 @@ app.get("/", (req, res) => {
 });
 
 // Create GET request
-app.get("/webhook", (req, res) => {
+app.get("/webhookget", (req, res) => {
   res.send("Express on Vercel-webhook");
 });
 
 // Your ReadMe secret
 const secret = 'CJjif4vSlIWpHLiDKRdH3NgBPEcFolNK';
 
-app.post('/webhookpost', express.json({ type: 'application/json' }), async (req, res) => {
+app.post('/webhook', express.json({ type: 'application/json' }), async (req, res) => {
   // Verify the request is legitimate and came from ReadMe.
   const signature = req.headers['readme-signature'];
 
