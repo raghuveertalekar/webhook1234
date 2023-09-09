@@ -38,13 +38,13 @@ app.post('/webhook', express.json({ type: 'application/json' }), async (req, res
   // const user = await db.find({ email: req.body.email })
   return res.json({
     // OAS Server variables
-    'base-url': 'https://localhost:443',
+    'base-url': '123.456.765.456:8443',
 
     // OAS Security variables
-    bearerAuth: 'bearerAuth',
-    oauth2: 'oauth2',
-    apiKey: { user: 'user', pass: 'pass' },
-    APIToken: 'APIToken',
+    bearerAuth: 'bearerAuth1234',
+    oauth2: 'oauth21233',
+    apiKey: { user: 'user122', pass: 'pass1234' },
+    APIToken: 'APIToken1234',
   });
 });
 
