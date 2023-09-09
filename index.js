@@ -8,7 +8,7 @@ const secret = 'CJjif4vSlIWpHLiDKRdH3NgBPEcFolNK';
 
 // Create GET request
 app.get("/", (req, res) => {
-  res.send("Express on Vercel");
+  res.send("Express on Vercel12345");
 });
 
 app.post('/webhook', express.json({ type: 'application/json' }), async (req, res) => {
