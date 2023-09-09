@@ -15,6 +15,8 @@ app.get("/webhookget", (req, res) => {
 });
 
 // Your ReadMe secret
+//const secret = 'CJjif4vSlIWpHLiDKRdH3NgBPEcFolNK';
+// Your ReadMe secret
 const secret = 'CJjif4vSlIWpHLiDKRdH3NgBPEcFolNK';
 
 app.post('/webhook', express.json({ type: 'application/json' }), async (req, res) => {
@@ -24,7 +26,7 @@ app.post('/webhook', express.json({ type: 'application/json' }), async (req, res
   try {
     console.log('try');
     console.log(req.headers);
-    //readme.verifyWebhook(req.body, signature, secret);
+    readme.verifyWebhook(req.body, signature, secret);
   } catch (e) {
     // Handle invalid requests
     return res.status(401).json({ error: e.message });
